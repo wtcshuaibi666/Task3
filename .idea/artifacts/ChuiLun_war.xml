@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ChuiLun:war">
+    <output-path>$PROJECT_DIR$/../ChuiLun/target</output-path>
+    <root id="archive" name="ChuiLun.war">
+      <element id="artifact" artifact-name="ChuiLun:war exploded" />
+    </root>
+  </artifact>
+</component>

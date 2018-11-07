@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jnshu.mapper.LianBiao">
+    <select id="findFirstList" parameterType="java.lang.Integer" resultMap="ResultMap">
+        select first_pro.fname,sec_pro.sname FROM first_pro,sec_pro WHERE first_pro.second_id=sec_pro.id
+    </select>
+    <resultMap id="ResultMap" type="com.jnshu.entity.First">
+        <result property="second_id" column="second_id" javaType="java.lang.Integer" />
+        <association property="second" javaType="com.jnshu.entity.Second">
+        <id property="id" column="id" javaType="java.lang.Integer"/>
+
+        </association>
+    </resultMap>
+</mapper>
